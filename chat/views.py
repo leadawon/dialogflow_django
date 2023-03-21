@@ -32,12 +32,12 @@ def chat_view(request):
     input_dict = convert(request.body)
     input_text = json.loads(input_dict)['text']
 
-    GOOGLE_AUTHENTICATION_FILE_NAME = "AppointmentScheduler.json"
+    GOOGLE_AUTHENTICATION_FILE_NAME = "djangochatbot-381222-a578c35aa543.json"
     current_directory = os.path.dirname(os.path.realpath(__file__))
     path = os.path.join(current_directory, GOOGLE_AUTHENTICATION_FILE_NAME)
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = path
 
-    GOOGLE_PROJECT_ID = "<YOUR_PROJECT_ID>"
+    GOOGLE_PROJECT_ID = "djangochatbot-381222"
     session_id = "1234567891"
     context_short_name = "does_not_matter"
 
